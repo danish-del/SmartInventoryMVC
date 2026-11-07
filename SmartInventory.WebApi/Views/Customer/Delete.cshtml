@@ -1,0 +1,22 @@
+﻿@model SmartInventory.Application.Dto.Customer.ResponseCustomerDto
+<h2>Delete Customer</h2>
+<h4>Are you Sure you want to Delete this?</h4>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="Id" value="@Model.CustomerId"/>
+    <div class="mb-3">
+        <strong>CustomerId</strong> @Model.CustomerId
+    </div>
+    <div class="mb-3">
+        <strong>Name</strong> @Model.Name
+    </div>
+<div class="mb-3">
+    <strong>Phone</strong> @Model.Phone
+</div>
+<div class="mb-3">
+    <strong>IsActive</strong> @Model.IsActive
+</div>
+
+<button type="submit" class="btn btn-danger">Delete</button>
+
+
+</form>

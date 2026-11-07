@@ -1,0 +1,32 @@
+﻿@model SmartInventory.Application.Dto.Product.ResponseProductDto
+<h2>Delete Product</h2>
+<h4>Are you Sure you want to Delete this.?</h4>
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.ProductId"/>
+    <div class="mb-3">
+        <strong>ProductId</strong> @Model.ProductId
+</div>
+<div class="mb-3">
+    <strong>SKU</strong> @Model.SKU
+</div>
+<div class="mb-3">
+    <strong>Name</strong> @Model.Name
+</div>
+<div class="mb-3">
+    <strong>Price</strong> @Model.Price
+</div>
+<div class="mb-3">
+    <strong>StockQuantity</strong> @Model.StockQuantity
+</div>
+<div class="mb-3">
+    <strong>CategoryId</strong> @Model.CategoryId
+</div>
+<div class="mb-3">
+    <strong>IsActive</strong> @Model.IsActive
+</div>
+<button type="submit" class="alert-danger">Delete</button>
+
+
+
+</form>

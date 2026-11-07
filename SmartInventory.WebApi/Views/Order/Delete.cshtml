@@ -1,0 +1,26 @@
+﻿@model SmartInventory.Application.Dto.Order.UpdateOrderDto
+
+<h2>Delete Order</h2>
+<h4>Are you Sure you want to Delete?</h4>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.OrderId"/>
+    <div class="mb-3">
+        <strong>OrderId</strong> @Model.OrderId
+    </div>
+    <div class="mb-3">
+        <strong>OrderNumber</strong> @Model.OrderNumber
+    </div>
+    <div class="mb-3">
+        <strong>CustomerId</strong> @Model.CustomerId
+    </div>
+    <div class="mb-3">
+        <strong>OrderDate</strong> @Model.OrderDate
+    </div>
+    <div class="mb-3">
+        <stromg>TotalAmount</stromg> @Model.TotalAmount
+    </div>
+    <div class="mb-3">
+        <strong>Status</strong> @Model.Status
+    </div>
+    <button type="submit" class="btn btn-warning">Delete</button>
+</form>

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<SmartInventory.Application.Dto.Customer.ResponseCustomerDto>
+<h2>Customer</h2>
+
+<table class="table">
+   <thead>
+        <tr>
+            <th>CustomerId</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>IsActive</th>
+            <th>Actions</th>
+        </tr>
+   </thead>
+   <tbody>
+       @foreach(var cust in Model)
+        {
+            <tr>
+                <th>@cust.CustomerId</th>
+                <th>@cust.Name</th>
+                <th>@cust.Email</th>
+                <th>@cust.Phone</th>
+                <th>@cust.IsActive</th>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@cust.CustomerId" class="btn btn-danger">
+                        Edit
+                    </a>
+                    <a asp-action="Delete" asp-route-id="@cust.CustomerId"
+                    class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

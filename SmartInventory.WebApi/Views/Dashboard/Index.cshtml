@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+<h2>Dashboard</h2>
+<div class="col-md-3  col-mb-3">
+<div class="p-3">
+<h5>Categories Count</h5>
+<h3>@ViewBag.CategoryCount</h3>
+<a asp-controller="Category" asp-action="Index" class="btn btn-primary">View Categories</a>
+</div>
+</div>
+<div class="col-md-3 col-mb-3">
+<div class="p-3">
+    <h5>Customer Count</h5>
+    <h3>@ViewBag.CustomerCount</h3>
+    <a asp-controller="Customer" asp-action="Index" class="btn btn-primary">View Customers</a>
+</div>
+</div>
+
+<div class="col-md-3 class=col-mb-3">
+    <div class="p-3">
+<h5>Order Count</h5>
+<h3>@ViewBag.OrderCount</h3>
+<a asp-controller="Order" asp-action="Index" class="btn btn-primary">View Orders</a>
+</div>
+</div>
+<div class="col-md-3 class=col-mb-3">
+<div class="p-3">
+    <h5>Product Count</h5>
+    <h3>@ViewBag.ProductCount</h3>
+    <a asp-controller="Product" asp-action="Index" class="btn btn-primary">View Products</a>
+</div>
+</div>

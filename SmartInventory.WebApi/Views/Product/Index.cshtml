@@ -1,0 +1,41 @@
+﻿@model IEnumerable<SmartInventory.Application.Dto.Product.ResponseProductDto>
+@{
+    ViewData["Title"] = "Product Dashboard";
+}
+    <h2>Product Dashboard</h2>
+    <table class="table">
+        <thead>
+           <tr>
+            <th>ProductId</th>               
+            <th>SKU</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>StockQuantity</th>
+            <th>CategoryId</th>
+            <th>IsActive</th>
+<th>Actions</th>
+           </tr>
+        </thead>
+        <tbody>
+            @foreach(var prod in Model)
+            {
+            <tr>
+                <td>@prod.ProductId</td>
+                <td>@prod.SKU</td>
+                <td>@prod.Name</td>
+                <td>@prod.Price</td>
+                <td>@prod.StockQuantity</td>
+                <td>@prod.CategoryId</td>
+                <th>IsActive</th>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@prod.ProductId"
+                    class="btn btn-warning">Edit</a>
+<a asp-action="Delete" asp-route-id="@prod.ProductId" class="btn btn-warning">Delete</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+
+
+
+    </table>

@@ -1,0 +1,15 @@
+﻿@model SmartInventory.Application.Dto.Category.ResponseCategoryDto
+<h2>Delete Category</h2>
+<h4>Are you Sure you want to Delete it?</h4>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" name="id" value="@Model.CategoryId" />
+    <div class="mb-3">
+    <strong>CategoryId</strong> @Model.CategoryId
+    </div>
+    <div class="mb-3">
+        <strong>Name</strong> @Model.Name
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+
+
+</form>

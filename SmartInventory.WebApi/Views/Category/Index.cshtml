@@ -1,0 +1,28 @@
+﻿@model IEnumerable<SmartInventory.Application.Dto.Category.ResponseCategoryDto>
+
+    <h1>Category</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>CategoryId</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var Categ in Model)
+        {
+            <tr>
+                <th>@Categ.CategoryId</th>
+                <th>@Categ.Name</th>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@Categ.CategoryId"
+                       class="btn btn-warning">Edit</a>
+                       <a asp-action="Delete" asp-route-id="@Categ.CategoryId"
+                       class="btn btn-warning">Delete</a>
+                </td>
+            </tr>
+          
+        }
+        </tbody> 
+    </table>

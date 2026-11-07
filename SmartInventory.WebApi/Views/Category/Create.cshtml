@@ -1,0 +1,15 @@
+﻿@model SmartInventory.Application.Dto.Category.ResponseCategoryDto
+<h2>Create Category</h2>
+<form asp-action="Create" method="post">
+  <div class="mb-3">
+        <label asp-for="CategoryId"></label>
+        <input asp-for="CategoryId" type="number" />
+        <span asp-validation-for="CategoryId"></span>
+  </div>
+  <div class="mb-3">
+      <label asp-for="Name"></label>
+      <input asp-for="Name"/>
+      <span asp-validation-for="Name"></span>
+  </div>
+  <button type="submit">Create</button>
+</form>

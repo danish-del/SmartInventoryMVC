@@ -1,0 +1,38 @@
+﻿@model SmartInventory.Application.Dto.Product.UpdateProductDto
+<h2>Edit Product</h2>
+
+<form asp-action="Edit" method="post">
+<input type="hidden" asp-for="ProductId"/>
+<div class="mb-3">
+<label asp-for="SKU"></label>
+<input asp-for="SKU" class="form-control"/>
+<span asp-validation-for="SKU"></span>
+</div>
+
+<div class="mb-3">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" class="form-control"/>
+    <span asp-validation-for="Name"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="Price"></label>
+    <input asp-for="Price" class="form-control"/>
+    <span asp-validation-for="Price"></span>
+</div>
+<div class="mb-3">
+    <label asp-for="StockQuantity"></label>
+    <input asp-for="StockQuantity" class="form-control"/>
+    <span asp-validation-for="StockQuantity"></span>
+</div>
+    <div class="mb-3">
+        <label asp-for="CategoryId"></label>
+        <input asp-for="CategoryId" class="form-control" />
+        <span asp-validation-for="CategoryId"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="IsActive"></label>
+        <input asp-for="IsActive" />
+        <span asp-validation-for="IsActive"></span>
+    </div>
+<button type="submit" class="btn btn-primary">Edit</button>
+</form>
