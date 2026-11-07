@@ -80,9 +80,25 @@ Identity-based authentication.
 JWT-based authentication support.
 Centralized exception handling.
 Structured logging using Serilog.
-📸 Screenshots
 
-Add your application screenshots here.
+**Deployment**
+The SmartInventory application has been successfully published and deployed on Internet Information Services (IIS).
+
+**Deployment Details**
+Hosting Server: IIS (Internet Information Services)
+Application Type: ASP.NET Core MVC
+Deployment Method: Visual Studio Publish
+Hosting Environment: Windows
+Local Access: http://localhost:8070
+Deployment Steps
+Published the ASP.NET Core MVC application using Visual Studio.
+Configured IIS on Windows.
+Created an Application Pool.
+Configured the website in IIS.
+Set the published folder as the website's physical path.
+Tested the application through localhost.
+
+
 
 text
 Screenshots/
